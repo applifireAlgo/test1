@@ -1,0 +1,33 @@
+
+
+
+ development mode --enabled true 
+
+
+
+// Spring batch Project Creation 
+
+project --topLevelPackage com.helloworld --projectName helloworldScheduler
+quit
+
+
+ development mode --enabled true 
+
+
+
+buzzorproject --topLevelPackage com.helloworld --isRuleEngine true --projectName helloworldScheduler --sourceCodeLocation /mnt/applifire/appConfigTemplate/appSourceCode/ --tomcatDeployLocation "" --tomcatAbsolutePath /Softwares/rcmTomcat/webapps ---userName root --password root --schema jdbc:mysql://localhost:3306/information_schema --solrhome /mnt/applifire/customers/01607208-F46E-4E1C-BFA1-3A37665BF91C/user/970A45A3-A883-4805-A531-04E6471F1EBF/BP3Q8DHDREW8GQ3SBMMG/solr-4.9.0 --isSpringBatch true
+
+entityManagerFactoryBean add property --name packagesToScan --value com.helloworld.app,com.athena,com.spartan
+
+Persistent change persistentUnitName --name helloworldScheduler
+
+Persistent add property --name eclipselink.dialect --value org.eclipse.persistence.platform.database.MySQLPlatform
+
+Persistent add property --name javax.persistence.jdbc.url --value jdbc:mysql://localhost:3306/helloworld
+
+Persistent add property --name javax.persistence.jdbc.user --value helloworld
+
+Persistent add property --name javax.persistence.jdbc.password --value helloworld
+
+Persistent add property --name javax.persistence.jdbc.driver --value com.mysql.jdbc.Driver
+quit
